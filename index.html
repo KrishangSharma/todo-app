@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App | Vanilla JS</title>
+    <script
+      src="https://kit.fontawesome.com/b96a7f5c51.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <span class="logo">TODO APP</span>
+        <a
+          href="https://github.com/KrishangSharma"
+          target="_blank"
+          rel="norefferer"
+          class="name"
+          >By: Krishang Sharma<i
+            class="fa-solid fa-arrow-up-right-from-square"
+          ></i
+        ></a>
+      </div>
+
+      <div class="todo-input-grp">
+        <input type="text" placeholder="Create a Todo..." class="todo-input" />
+        <button class="btn" onclick="addTodo()">Add Todo</button>
+      </div>
+
+      <h2 class="heading"></h2>
+
+      <div class="todo-list">
+        <!-- Inserted via JS -->
+      </div>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>

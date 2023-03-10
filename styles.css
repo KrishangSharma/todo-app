@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+.container {
+  width: 55%;
+  margin: auto;
+}
+
+.nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.name {
+  color: inherit;
+  text-decoration: none;
+}
+
+.name i {
+  margin-left: 10px;
+}
+
+.todo-input-grp {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  margin: 25px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-input {
+  width: 70%;
+  height: 80%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: none;
+  border: 2px solid black;
+}
+
+.btn {
+  width: 20%;
+  height: 80%;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  font-size: 20px;
+  color: black;
+  border-radius: 5px;
+  border: 2px solid black;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  color: white;
+  background: black;
+}
+
+.todo-list {
+  margin-top: 25px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  outline: 2px solid black;
+}
+
+h2 {
+  padding: 0 10px;
+}
+
+.todo {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s ease-in-out;
+}
+
+.todo:hover {
+  box-shadow: 0 0 15px rgba(215, 215, 215, 0.2);
+}
+
+.hidden {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  cursor: pointer;
+  place-items: center;
+}
+
+.todo-text {
+  width: 80%;
+}
+
+@keyframes add {
+  from {
+    display: none;
+    transform: translateY(100%);
+  }
+  to {
+    display: block;
+    transform: translateY(0);
+  }
+}
+
+@keyframes delete {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(300%);
+  }
+}
+
+.remove {
+  animation: delete 0.5s ease-in-out;
+}
+
+.add {
+  animation: add 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 90%;
+  }
+  .todo-input {
+    width: 65%;
+    height: 50%;
+    font-size: 18px;
+  }
+  .btn {
+    height: 50%;
+    font-size: 18px;
+    width: 30%;
+  }
+  h2 {
+    padding: 0;
+  }
+  .todo-list {
+    padding: 0;
+  }
+}
